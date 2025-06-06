@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 300px;
+    background: #030303;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: white;
+    overflow-y: auto;
+}
+
+.sidebar-nav {
+    background: #111111;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-nav .logo img {
+    width: 50%;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #1DB954;
+}
+
+.menu img {
+    width: 24px;
+    height: 24px;
+}
+
+.library::after {
+    content: "+";
+    float: right;
+    background: #1f1e1e;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.sidebar-scroll {
+    height: 120px;
+    overflow-y: auto;
+}
+
+.create-playlist {
+    background-color: #242424;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.create-playlist h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.create-playlist p {
+    font-size: 12px;
+    color: #b3b3b3;
+    margin-bottom: 10px;
+}
+
+.create-playlist button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.create-playlist button:hover {
+    background-color: #f0f0f0;
+}
+
+.privacy ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.privacy ul li {
+    padding: 0 10px;
+    padding-bottom: 8px;
+}
+
+.privacy ul li a {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 10px;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+.privacy ul li a:hover {
+    text-decoration: underline;
+    color: #1DB954;
+}
+
+.pt-br {
+    padding: 20px 30px;
+}
+
+.pt-br button {
+    padding: 10px 30px;
+    background: transparent;
+    border: 1px solid #818080;
+    color: white;
+    border-radius: 20px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.pt-br button:hover {
+    border: 1px solid #f0f0f0;
+}
+
+.main-section {
+    margin-left: 300px;
+    background: #1b1b1b;
+    min-height: 100vh;
+}
+
+.top-nav {
+    padding: 10px 30px;
+    background: #030303;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-nav button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.top-nav .prev-btn button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.login-btn .inscrever {
+    color: #838181;
+    background: none;
+    border: none;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.login-btn .login {
+    color: black;
+    background: white;
+    border: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.spotify-playlist {
+    padding: 20px 40px;
+}
+
+.spotify-playlist h2 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.spotify-playlist .card {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px; /* Adicionado para barra de rolagem se houver muitos itens */
+}
+
+.spotify-playlist .card .item {
+    position: relative; /* Importante para o posicionamento do play-btn */
+    width: 190px;
+    min-width: 140px;
+    background-color: #1d1d1d;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    flex-shrink: 0; /* Impede que os itens encolham em telas pequenas */
+}
+
+.spotify-playlist .card .item:hover {
+    background-color: #242424;
+}
+
+.spotify-playlist .card .item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.spotify-playlist .item h4 {
+    color: #fff;
+}
+
+.spotify-playlist .item p {
+    color: #919191;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.spotify-playlist .item p:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para o botão de play */
+.spotify-playlist .play-btn {
+    background: #1DB954; /* Fundo verde do botão */
+    border-radius: 500px; /* Transforma em círculo */
+    width: 45px; /* Define a largura do botão */
+    height: 45px; /* Define a altura do botão */
+    padding: 5px; /* Espaçamento interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar o botão */
+    
+    /* Posicionamento fixo do botão dentro do item */
+    position: absolute; 
+    bottom: 87px; /* Distância da parte inferior do card */
+    right: 20px; /* Distância da parte direita do card */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease; /* Transição suave para aparecer/desaparecer */
+}
+
+.spotify-playlist .item:hover .play-btn {
+    opacity: 1; /* Torna o botão visível ao passar o mouse sobre o item */
+}
+
+.spotify-playlist .play-btn img {
+    width: 28px; /* Tamanho do ícone de play para se ajustar ao botão */
+}
+
+
+/* --- NOVOS ESTILOS PARA ARTISTAS POPULARES --- */
+
+.spotify-artists {
+    padding: 20px 40px;
+    margin-top: 30px; /* Espaço entre as playlists e artistas */
+}
+
+.spotify-artists h2 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.spotify-artists .artist-card-container {
+    display: flex;
+    gap: 20px; /* Espaço entre os cards de artistas */
+    overflow-x: auto; /* Permite rolagem horizontal se muitos cards */
+    padding-bottom: 10px; /* Adiciona um pequeno padding para a barra de rolagem */
+}
+
+.spotify-artists .artist-item {
+    width: 200px; /* Largura base para cada card */
+    min-width: 150px; /* Garante que o card não fique muito pequeno */
+    padding: 15px;
+    border-radius: 8px; /* Arredondamento dos cantos do card */
+    color: white;
+    text-align: center; /* Centraliza o texto dentro do card */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    flex-shrink: 0; /* Impede que os itens encolham */
+}
+
+.spotify-artists .artist-item:hover {
+    background-color: #242424;
+}
+
+.spotify-artists .artist-item img {
+    width: 100%; /* A imagem preenche a largura do item */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    aspect-ratio: 1 / 1; /* Garante que a imagem seja um quadrado perfeito antes de arredondar */
+    margin-bottom: 10px;
+}
+
+.spotify-artists .artist-item h4 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.spotify-artists .artist-item p {
+    color: #b3b3b3;
+    font-size: 13px;
+}
+
+.footer-section{
+    padding: 20px 20px;
+}
+.footer-section .footer{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
+}
+.footer-section .footer .footer-links{
+   display: flex;
+   justify-content: space-between;
+  gap: 50px;
+}
+.footer-section .footer .footer-links .footer-colum{
+  margin: 0 12px;
+
+}
+.footer-section .footer .footer-links div{
+ color: #fff;
+ font-weight: 600;
+ margin-bottom: 12px;
+ font-size: 16px;
+}
+.footer-section .footer .footer-links ul li{
+list-style: none;
+margin: 6px 0;
+}
+.footer-section .footer .footer-links ul li a{
+text-decoration: none;
+color: #919191;
+font-size: 14px;
+cursor: pointer;
+}
+.footer-section .footer .footer-links ul li a:hover{
+text-decoration: underline;
+color: #1DB954;
+
+}
+.social-links {
+    position: absolute; /* Permite posicionar os ícones */
+    right: 80px; /* Ajuste este valor para mover mais ou menos para a direita */
+    bottom: -70%; /* Ajuste este valor para mover mais ou menos para cima (aumentar para subir) */
+}
+
+.social-links img {
+    background: #353434;
+    padding: 5px; /* Diminuindo o padding para um tamanho menor */
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    width: 32px; /* Diminuindo a largura */
+    height: 32px; /* Diminuindo a altura */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links img:hover {
+    background-color: #555555;
+    transform: scale(1.05);
+}
+
+hr{
+    margin: 20px 40px;
+    border: 0;
+    outline: 0;
+border: 1px solid #3f3f3f;
+margin-top: 40px;
+}
+.copyright{
+    padding: 0 40px;
+    color: #919191;
+}
