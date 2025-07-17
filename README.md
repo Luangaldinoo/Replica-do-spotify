@@ -3,8 +3,6 @@ Um projeto desenvolvido como parte dos estudos de desenvolvimento web, recriando
 
 Este clone foca na estrutura e no design visual da plataforma, utilizando HTML e CSS puros para demonstrar habilidades de front-end.
 
-🚀 Demonstração (Screenshot)
-(Nota: Você pode substituir "image_7e7ed1.png" pelo caminho da sua captura de tela ou adicionar mais screenshots para mostrar diferentes partes da interface.)
 
 ✨ Recursos Principais
 Sidebar Navegável: Menu lateral com ícones e links para "Home", "Search" e "Sua Biblioteca".
@@ -25,19 +23,7 @@ Design Responsivo (Básico): Estrutura inicial para adaptação a diferentes tam
 HTML5: Estruturação do conteúdo da página.
 CSS3: Estilização e layout da interface, incluindo flexbox para organização.
 
-▶️ Como Rodar o Projeto Localmente
-Clone o Repositório:
 
-Bash
-
-git clone https://github.com/seu-usuario/seu-repositorio.git
-(Nota: Substitua seu-usuario/seu-repositorio pelo caminho real do seu repositório no GitHub.)
-
-Navegue até a Pasta do Projeto:
-
-Bash
-
-cd seu-repositorio
 Abra no Navegador:
 Basta abrir o arquivo index.html diretamente no seu navegador de preferência.
 
